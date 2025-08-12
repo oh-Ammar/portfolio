@@ -1,121 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link  rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,700;1,700;&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ammar Yasser — Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: white;
+    }
+    header h1 {
+      font-weight: 700;
+    }
+    nav.navbar {
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h2 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #e9ecef;
+      padding-bottom: .5rem;
+    }
+    .list-group-item {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .list-group-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    .timeline-item {
+      padding: 1rem;
+      border-left: 4px solid #2a5298;
+      margin-bottom: 1rem;
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .timeline-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    footer {
+      background-color: #212529;
+      color: #ccc;
+    }
+    footer small {
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-    <nav id="navbar">
-        <h2 class="logo"><a href="#main" class="test">Portfo<span>lio</span></a></h2>
-        <ul>
-            <li>
-                <a href="#main" class="btn2 active">Home</a>
-                <a href="#about" class="btn2">About</a>
-                <a href="#service" class="btn2">Services</a>
-                <a href="#about" class="btn2">Skills</a>
-                <a href="#contact-me" class="btn2">Contact</a>
-            </li>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ammar Yasser</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-        <a href="#" class="btn">Subscribe</a>
-    </nav>
-    <div class="main" id="main">
-        
-        <div class="cont">
-            <h4>Hello, my name is</h4>
-            <h1>Ammar Yasser</h1>
-            <h3>I'm a Computer Science student.</h3>
-            <div class="news">
-                <form>
-                    <input type="email" name="email" id="mail" placeholder="Enter Your Email">
-                    <input type="submit" name="submit" value="Send">
-                </form>
-            </div>
-        </div>
+      </div>
     </div>
-    <section class="about" id="about">
-        <div class="main2" id="main2">
-            <img src="img/tt.jpg">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <h5>Developer <span>& Designer</span></h5>
-                <p>I am a university student, studying computer science. I am proficient in web development, web design, transcription and data entry. I can provide clean code and pixel perfect design, as well as an interactive website through the use of animations.</p>
-                <button type="button">Contact</button>
-            </div>
-        </div>
+  </nav>
+
+  <header class="py-5">
+    <div class="container text-center">
+      <h1 class="display-4">Ammar Yasser</h1>
+      <p class="lead">Computer Science & Mathematics Graduate | AI & Full‑Stack Development</p>
+      <p><strong>Location:</strong> Cairo, Egypt · <strong>Email:</strong> <a href="mailto:ammaryasserwork1@gmail.com" class="text-white">ammaryasserwork1@gmail.com</a></p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <section id="about" class="mb-5">
+      <h2>About</h2>
+      <p>Dual major B.Sc. in Computer Science and Mathematics (Ain Shams University, 2021–2025). Hands-on experience in AI development, full-stack projects, and customer-facing technical support. Passionate about creating impactful solutions through technology.</p>
     </section>
 
-    <div class="service" id="service">
-        <div class="title">
-            <h2>Our Services</h2>
+    <section id="projects" class="mb-5">
+      <h2>Projects</h2>
+      <div class="list-group">
+        <div class="list-group-item">
+          <h5>AI-Enhanced Learning Assistant</h5>
+          <p>Graduation project integrating T5 NLP model and custom WH-question rules for automated quiz generation. <a href="https://github.com/oh-Ammar/ai-learning-assistant">GitHub Repo</a></p>
         </div>
-        <div class="box">
-            <div class="card">
-                <i class="fa-solid fa-bars"></i>
-                <h5>Web Development</h5>
-                <div class="pra">
-                    <p>Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be as fast and as smooth as possible.</p>
-                    <p style="text-align:center;">
-                        <a class="button" href="#">Read More</a>  
-                    </p>
-                </div>
-            </div>
-            
-            <div class="card">
-                <i class="far fa-user"></i>
-                <h5>Web Design</h5>
-                <div class="pra">
-                    <p>A functional website is, while of course a necessity, only becomes alive with a lively and interactive design.</p>
-                    <p style="text-align:center;">
-                        <a class="button" href="#">Read More</a>  
-                    </p>
-                </div>
-            </div>
-
-            <div class="card">
-                <i class="far fa-bell"></i>
-                <h5>Data Clerk</h5>
-                <div class="pra">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus qui, culpa minus dolorum in quia error, ipsum similique numquam eaque.</p>
-                    <p style="text-align:center;">
-                        <a class="button" href="#">Read More</a>  
-                    </p>
-                </div>
-            </div>
-
+        <div class="list-group-item">
+          <h5>Orabi 360 Mobile App</h5>
+          <p>Community-focused app for the Orabi Agricultural Residence, offering booking services, land listings, and a resident hub.</p>
         </div>
+        <div class="list-group-item">
+          <h5>US/Canada/Australia Dropshipping Store</h5>
+          <p>Automated Shopify store targeting international markets with viral products, leveraging AI-driven ads.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="mb-5">
+      <h2>Work Experience</h2>
+      <div class="timeline-item">
+        <h5>Customer Support Representative — Gaming Support</h5>
+        <p class="text-muted">5CA | July 2024 – Present</p>
+        <ul>
+          <li>Provide in-game customer support and technical troubleshooting for multiple AAA titles.</li>
+          <li>Handle account recovery, billing, and escalate to engineering when necessary.</li>
+          <li>Maintain high CSAT and meet strict SLA targets.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <h5>Customer Service Representative — Walmart Support</h5>
+        <p class="text-muted">Transcom | 2022 – 2024</p>
+        <ul>
+          <li>Handled customer inquiries for Walmart accounts via phone, chat and email.</li>
+          <li>Assisted with order issues, refunds, and account troubleshooting.</li>
+          <li>Trained new hires and contributed to internal knowledge base.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <h5>Developer & AI Researcher</h5>
+        <p class="text-muted">Freelance / Projects | 2020 – Present</p>
+        <ul>
+          <li>Built multiple AI-driven projects including a learning assistant and job-application automation tools.</li>
+          <li>Experienced with Python, Flask, FastAPI, React, and deploying apps to cloud platforms.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education" class="mb-5">
+      <h2>Education</h2>
+      <p><strong>B.Sc. in Computer Science and Mathematics</strong> — Ain Shams University (2021–2025)</p>
+    </section>
+
+    <section id="skills" class="mb-5">
+      <h2>Skills</h2>
+      <ul class="list-inline">
+        <li class="list-inline-item badge bg-primary m-1">Java</li>
+        <li class="list-inline-item badge bg-primary m-1">C++</li>
+        <li class="list-inline-item badge bg-primary m-1">Python</li>
+        <li class="list-inline-item badge bg-primary m-1">JavaScript</li>
+        <li class="list-inline-item badge bg-primary m-1">PHP</li>
+        <li class="list-inline-item badge bg-success m-1">Flask</li>
+        <li class="list-inline-item badge bg-success m-1">FastAPI</li>
+        <li class="list-inline-item badge bg-success m-1">React</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="mb-5">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ammaryasserwork1@gmail.com">ammaryasserwork1@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="py-4 text-center">
+    <div class="container">
+      <small>&copy; 2025 Ammar Yasser — All Rights Reserved</small>
     </div>
-    
+  </footer>
 
-    <div class="contact-me" id="contact-me">
-        <p>Let Me Make You A Beautiful Website.</p>
-        <a class="button-two" href="#">
-            Hire Me
-        </a>
-    </div>
-
-    <footer>
-        <p>Ammar Yasser</p>
-        <div class="social">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-        </div>
-            <p class="end">Copyright 2023 <i class="fa-regular fa-copyright"></i></p>
-    </footer>
-    <script>
-        // Add active class to the current button (highlight it)
-        var header = document.getElementById("navbar");
-        var btns = header.getElementsByClassName("btn2");
-        for (var i = 0; i < btns.length; i++) {
-          btns[i].addEventListener("click", function() {
-          var current = document.getElementsByClassName("active");
-          current[0].className = current[0].className.replace(" active", "");
-          this.className += " active";
-          });
-        }
-        </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
