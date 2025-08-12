@@ -4,7 +4,7 @@ This repository contains the source code for my personal portfolio website.
 It showcases my background, skills, education, work experience, and selected projects.
 
 ## Live Demo
-You can host this portfolio using GitHub Pages, Netlify, Vercel, or any other static site hosting platform.
+https://oh-ammar.github.io/portfolio/
 
 ## Sections
 - **About**: Brief introduction and academic background.
